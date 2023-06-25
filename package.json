@@ -5,14 +5,23 @@
   "repository": "https://github.com/codebryo/vue-school-test-utils-base.git",
   "author": "Roman Kuba <roman.kuba@gmail.com>",
   "license": "MIT",
+  "scripts": {
+    "test": "DEBUG=\"t:*\" jest --detectOpenHandles",
+    "test:watch": "NODE_ENV=development DEBUG=\"jest:*,t:*\" jest --watch --onlyChanged --detectOpenHandles"
+  },
   "dependencies": {
     "@babel/core": "^7.3.4",
     "@babel/preset-env": "^7.3.4",
+    "@vue/test-utils": "^1.1.2",
     "babel-core": "^7.0.0-bridge.0",
     "babel-jest": "^24.5.0",
     "jest": "^24.5.0",
     "jest-serializer-vue": "^2.0.2",
     "vue": "^2.6.9",
     "vuex": "^3.1.1"
+  },
+  "devDependencies": {
+    "vue-jest": "^3.0.7",
+    "vue-template-compiler": "^2.6.12"
   }
 }
